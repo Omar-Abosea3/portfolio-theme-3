@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | ManPro Solutions</title>
+  <meta name="description" content="Latest insights from ManPro" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style id="dynamic-color-styles">
+    @layer base {
+      :root {
+        --palette-primary: #1B3A6B;
+        --palette-secondary: #C9972A;
+        --background-default: #F4F6FA;
+        --background-paper: #FFFFFF;
+        --text-primary: #0F1F3D;
+        --text-secondary: #5A6A85;
+        --text-tertiary: #FFFFFF;
+        --borders-main: #DDE3EE;
+      }
+
+      :dir(ltr) {
+        font-family: 'Lexend Deca', system-ui, sans-serif;
+      }
+
+      :dir(rtl) {
+        font-family: 'Changa', system-ui, sans-serif;
+      }
+    }
+
+    .bg-cp_palette_primary {
+      background-color: var(--palette-primary) !important;
+    }
+
+    .bg-cp_palette_secondary {
+      background-color: var(--palette-secondary) !important;
+    }
+
+    .bg-cp_background_default {
+      background-color: var(--background-default) !important;
+    }
+
+    .bg-cp_background_paper {
+      background-color: var(--background-paper) !important;
+    }
+
+    .text-cp_text_primary {
+      color: var(--text-primary) !important;
+    }
+
+    .text-cp_text_secondary {
+      color: var(--text-secondary) !important;
+    }
+
+    .text-cp_text_tertiary {
+      color: var(--text-tertiary) !important;
+    }
+
+    .border-cp_borders_main {
+      border-color: var(--borders-main) !important;
+    }
+
+    .hover\:bg-cp_palette_primary:hover {
+      background-color: var(--palette-primary) !important;
+    }
+
+    .hover\:bg-cp_palette_secondary:hover {
+      background-color: var(--palette-secondary) !important;
+    }
+
+    .hover\:text-cp_text_primary:hover {
+      color: var(--text-primary) !important;
+    }
+
+    .hover\:text-cp_text_secondary:hover {
+      color: var(--text-secondary) !important;
+    }
+
+    .hover\:text-cp_text_tertiary:hover {
+      color: var(--text-tertiary) !important;
+    }
+
+    .hover\:border-cp_borders_main:hover {
+      border-color: var(--borders-main) !important;
+    }
+
+    .text-cp_palette_primary {
+      color: var(--palette-primary) !important;
+    }
+
+    .text-cp_palette_secondary {
+      color: var(--palette-secondary) !important;
+    }
+
+    .border-cp_palette_primary {
+      border-color: var(--palette-primary) !important;
+    }
+
+    .hover\:text-cp_palette_primary:hover {
+      color: var(--palette-primary) !important;
+    }
+
+    .focus\:border-cp_palette_primary:focus {
+      border-color: var(--palette-primary) !important;
+    }
+  </style>
+</head>
+
+<body class="bg-cp_background_default text-cp_text_primary">
+
+  <header class="bg-cp_background_paper border-b border-cp_borders_main sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="logo" class="w-10 h-10" />
+        <span class="text-xl font-bold text-cp_palette_primary">ManPro <span
+            class="text-cp_palette_secondary">Solutions</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html"
+          class="text-cp_text_primary hover:text-cp_palette_secondary font-medium transition-colors">Home</a>
+        <a href="about.html"
+          class="text-cp_text_primary hover:text-cp_palette_secondary font-medium transition-colors">About</a>
+        <a href="services.html"
+          class="text-cp_text_primary hover:text-cp_palette_secondary font-medium transition-colors">Services</a>
+        <a href="blog.html" class="text-cp_palette_secondary font-medium transition-colors">Blog</a>
+        <a href="testimonials.html"
+          class="text-cp_text_primary hover:text-cp_palette_secondary font-medium transition-colors">Testimonials</a>
+        <a href="contact.html"
+          class="text-cp_text_primary hover:text-cp_palette_secondary font-medium transition-colors">Contact</a>
+      </nav>
+
+      <a href="contact.html"
+        class="hidden md:inline-block bg-cp_palette_secondary text-cp_text_tertiary px-5 py-2 rounded-lg font-semibold hover:bg-cp_palette_primary transition-colors">Get
+        Started</a>
+
+      <!-- Hamburger button (mobile only) -->
+      <button id="mobileMenuBtn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"
+        class="md:hidden inline-flex flex-col justify-center items-center w-10 h-10 rounded-lg border border-cp_borders_main">
+        <span class="block w-6 h-0.5 bg-cp_palette_primary mb-1.5 transition-transform"></span>
+        <span class="block w-6 h-0.5 bg-cp_palette_primary mb-1.5 transition-opacity"></span>
+        <span class="block w-6 h-0.5 bg-cp_palette_primary transition-transform"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <nav id="mobileMenu" class="hidden md:hidden border-t border-cp_borders_main bg-cp_background_paper">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="index.html" class="text-cp_text_primary hover:text-cp_palette_secondary font-medium">Home</a>
+        <a href="about.html" class="text-cp_text_primary hover:text-cp_palette_secondary font-medium">About</a>
+        <a href="services.html" class="text-cp_text_primary hover:text-cp_palette_secondary font-medium">Services</a>
+        <a href="blog.html" class="text-cp_palette_secondary font-medium">Blog</a>
+        <a href="testimonials.html"
+          class="text-cp_text_primary hover:text-cp_palette_secondary font-medium">Testimonials</a>
+        <a href="contact.html" class="text-cp_text_primary hover:text-cp_palette_secondary font-medium">Contact</a>
+        <a href="contact.html"
+          class="bg-cp_palette_secondary text-cp_text_tertiary px-5 py-2 rounded-lg font-semibold text-center hover:bg-cp_palette_primary transition-colors">Get
+          Started</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+
+      <div class="absolute inset-0 bg-cp_palette_primary"></div>
+      <div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
+        <h1 class="a-fade-up text-5xl md:text-6xl font-bold text-cp_text_tertiary mb-4">Insights & News</h1>
+        <p class="a-fade-up text-lg text-cp_text_tertiary opacity-90 max-w-2xl mx-auto">Expert articles on manpower,
+          ecommerce and booking trends.</p>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+
+      <article
+        class="a-on-scroll bg-cp_background_paper rounded-2xl overflow-hidden border border-cp_borders_main hover:shadow-xl transition-shadow">
+        <img src="images/blog1.jpg" class="w-full h-52 object-cover" />
+        <div class="p-6">
+          <span class="text-xs font-semibold text-cp_palette_secondary">Recruitment</span>
+          <h3 class="text-lg font-bold text-cp_palette_primary mt-2 mb-2">How to Hire Skilled Workers Faster</h3>
+          <p class="text-sm text-cp_text_secondary mb-4">A practical guide to reducing time-to-hire while maintaining
+            quality.</p>
+          <a href="#" class="text-cp_palette_primary font-semibold hover:text-cp_palette_secondary">Read more →</a>
+        </div>
+      </article>
+      <article
+        class="a-on-scroll bg-cp_background_paper rounded-2xl overflow-hidden border border-cp_borders_main hover:shadow-xl transition-shadow">
+        <img src="images/blog2.jpg" class="w-full h-52 object-cover" />
+        <div class="p-6">
+          <span class="text-xs font-semibold text-cp_palette_secondary">Ecommerce</span>
+          <h3 class="text-lg font-bold text-cp_palette_primary mt-2 mb-2">Launching Your First Online Store</h3>
+          <p class="text-sm text-cp_text_secondary mb-4">Step-by-step playbook to go live with a branded ecommerce
+            experience.</p>
+          <a href="#" class="text-cp_palette_primary font-semibold hover:text-cp_palette_secondary">Read more →</a>
+        </div>
+      </article>
+      <article
+        class="a-on-scroll bg-cp_background_paper rounded-2xl overflow-hidden border border-cp_borders_main hover:shadow-xl transition-shadow">
+        <img src="images/blog3.jpg" class="w-full h-52 object-cover" />
+        <div class="p-6">
+          <span class="text-xs font-semibold text-cp_palette_secondary">Industry</span>
+          <h3 class="text-lg font-bold text-cp_palette_primary mt-2 mb-2">Workforce Management in 2026</h3>
+          <p class="text-sm text-cp_text_secondary mb-4">Trends shaping how companies manage and deploy talent this
+            year.
+          </p>
+          <a href="#" class="text-cp_palette_primary font-semibold hover:text-cp_palette_secondary">Read more →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-cp_palette_primary text-cp_text_tertiary mt-20">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="images/logo.png" alt="logo" class="w-10 h-10 bg-cp_background_paper rounded-full p-1" />
+          <span class="text-xl font-bold">ManPro</span>
+        </div>
+        <p class="text-sm opacity-80">Trusted manpower solutions, ecommerce and booking platform built for modern
+          enterprises.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-cp_palette_secondary">Company</h4>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li><a href="about.html" class="hover:text-cp_palette_secondary">About</a></li>
+          <li><a href="services.html" class="hover:text-cp_palette_secondary">Services</a></li>
+          <li><a href="blog.html" class="hover:text-cp_palette_secondary">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-cp_palette_secondary">Contact</h4>
+        <ul class="space-y-2 text-sm opacity-90">
+          <li class="flex items-center gap-2"><img src="images/icon-phone.png" class="w-4 h-4 invert" alt="" /> +1 (555)
+            010-2024</li>
+          <li class="flex items-center gap-2"><img src="images/icon-mail.png" class="w-4 h-4 invert" alt="" />
+            hello@manpro.co</li>
+          <li class="flex items-center gap-2"><img src="images/icon-pin.png" class="w-4 h-4 invert" alt="" /> 12
+            Business Bay, Dubai</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-cp_palette_secondary">Newsletter</h4>
+        <form class="flex gap-2"><input type="email" placeholder="Email"
+            class="flex-1 px-3 py-2 rounded-lg text-cp_text_primary focus:border-cp_palette_primary outline-none" /><button
+            class="bg-cp_palette_secondary px-4 rounded-lg font-semibold">Join</button></form>
+      </div>
+    </div>
+    <div class="border-t border-white/10 text-center py-4 text-sm opacity-70">&copy; 2026 ManPro Solutions. All rights
+      reserved.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      var bars = btn.querySelectorAll('span');
+      var isOpen = false;
+      var animating = false;
+
+      // Ensure menu is measurable but hidden initially
+      menu.classList.remove('hidden');
+      menu.style.overflow = 'hidden';
+      menu.style.height = '0px';
+      menu.style.opacity = '0';
+
+      function openMenu() {
+        animating = true;
+        var links = menu.querySelectorAll('a');
+
+        // Measure target height
+        menu.style.height = 'auto';
+        var targetHeight = menu.offsetHeight;
+        menu.style.height = '0px';
+
+        anime({
+          targets: menu,
+          height: [0, targetHeight],
+          opacity: [0, 1],
+          duration: 400,
+          easing: 'easeOutCubic',
+          complete: function () {
+            menu.style.height = 'auto';
+            animating = false;
+          }
+        });
+
+        anime({
+          targets: links,
+          translateY: [-15, 0],
+          opacity: [0, 1],
+          delay: anime.stagger(60, { start: 100 }),
+          duration: 400,
+          easing: 'easeOutCubic'
+        });
+
+        // Hamburger -> X
+        anime({ targets: bars[0], translateY: [0, 8], rotate: [0, 45], duration: 300, easing: 'easeOutQuad' });
+        anime({ targets: bars[1], opacity: [1, 0], duration: 200, easing: 'easeOutQuad' });
+        anime({ targets: bars[2], translateY: [0, -8], rotate: [0, -45], duration: 300, easing: 'easeOutQuad' });
+      }
+
+      function closeMenu() {
+        animating = true;
+        var currentHeight = menu.offsetHeight;
+        menu.style.height = currentHeight + 'px';
+
+        anime({
+          targets: menu,
+          height: [currentHeight, 0],
+          opacity: [1, 0],
+          duration: 350,
+          easing: 'easeInCubic',
+          complete: function () {
+            animating = false;
+          }
+        });
+
+        // X -> Hamburger
+        anime({ targets: bars[0], translateY: [8, 0], rotate: [45, 0], duration: 300, easing: 'easeOutQuad' });
+        anime({ targets: bars[1], opacity: [0, 1], duration: 250, delay: 100, easing: 'easeOutQuad' });
+        anime({ targets: bars[2], translateY: [-8, 0], rotate: [-45, 0], duration: 300, easing: 'easeOutQuad' });
+      }
+
+      btn.addEventListener('click', function () {
+        if (animating) return;
+        isOpen = !isOpen;
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (isOpen) openMenu(); else closeMenu();
+      });
+    })();
+    document.addEventListener('DOMContentLoaded', function () {
+      anime({ targets: '.a-fade-up', translateY: [40, 0], opacity: [0, 1], delay: anime.stagger(120), duration: 900, easing: 'easeOutExpo' });
+      anime({ targets: '.a-zoom', scale: [0.85, 1], opacity: [0, 1], delay: anime.stagger(150), duration: 800, easing: 'easeOutBack' });
+      anime({ targets: '.a-slide-left', translateX: [-60, 0], opacity: [0, 1], duration: 1000, easing: 'easeOutExpo' });
+      anime({ targets: '.a-slide-right', translateX: [60, 0], opacity: [0, 1], duration: 1000, easing: 'easeOutExpo' });
+      document.querySelectorAll('.count').forEach(el => {
+        anime({ targets: el, innerHTML: [0, parseInt(el.dataset.target)], round: 1, duration: 2000, easing: 'easeOutExpo' });
+      });
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) {
+          anime({ targets: e.target, translateY: [40, 0], opacity: [0, 1], duration: 900, easing: 'easeOutExpo' });
+          io.unobserve(e.target);
+        }
+      }), { threshold: 0.15 });
+      document.querySelectorAll('.a-on-scroll').forEach(el => { el.style.opacity = 0; io.observe(el); });
+    });
+  </script>
+</body>
+
+</html>
