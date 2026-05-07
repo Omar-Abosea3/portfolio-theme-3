@@ -1,0 +1,95 @@
+﻿GitHub Detailed Report (Last 24 Hours)
+Repo: omar-abosea3/portfolio-theme-3
+Generated At: 05/07/2026 16:50:03
+==================================================
+
+COMMIT:
+Author: Omar-Abosea3
+Message: edit link span to compatable with builder
+Date: 2026-05-07T13:40:24Z
+----------------------------------
+File: about.html
+  + Additions: 45
+  - Deletions: 17
+  ~ Changes: 62
+----------------------------------
+File: blog.html
+  + Additions: 49
+  - Deletions: 21
+  ~ Changes: 70
+----------------------------------
+File: contact.html
+  + Additions: 45
+  - Deletions: 20
+  ~ Changes: 65
+----------------------------------
+File: index.html
+  + Additions: 46
+  - Deletions: 30
+  ~ Changes: 76
+----------------------------------
+File: services.html
+  + Additions: 59
+  - Deletions: 27
+  ~ Changes: 86
+----------------------------------
+File: testimonials.html
+  + Additions: 45
+  - Deletions: 20
+  ~ Changes: 65
+----------------------------------
+
+==================================================
+
+COMMIT:
+Author: Omar-Abosea3
+Message: new-edits
+Date: 2026-05-07T08:01:25Z
+----------------------------------
+File: services.html
+  + Additions: 3
+  - Deletions: 2
+  ~ Changes: 5
+----------------------------------
+
+==================================================
+
+COMMIT:
+Author: Omar-Abosea3
+Message: edits
+Date: 2026-05-07T07:48:02Z
+----------------------------------
+File: about.html
+  + Additions: 16
+  - Deletions: 8
+  ~ Changes: 24
+----------------------------------
+File: blog.html
+  + Additions: 20
+  - Deletions: 11
+  ~ Changes: 31
+----------------------------------
+File: contact.html
+  + Additions: 16
+  - Deletions: 8
+  ~ Changes: 24
+----------------------------------
+File: index.html
+  + Additions: 23
+  - Deletions: 14
+  ~ Changes: 37
+----------------------------------
+File: services.html
+  + Additions: 24
+  - Deletions: 16
+  ~ Changes: 40
+----------------------------------
+File: testimonials.html
+  + Additions: 16
+  - Deletions: 8
+  ~ Changes: 24
+----------------------------------
+
+==================================================
+
+
